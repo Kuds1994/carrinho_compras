@@ -1,75 +1,8 @@
 <div class="shopping-cart">
-
-  <div class="product-list">
   
-      <div class="product" *ngFor="let product of products">
+  <app-list-products></app-list-products>
 
-        <img [ngStyle]="{'width': '100%'}" src="https://picsum.photos/200"  alt="">
-
-        <div class="product-description">
-          {{product.description.length > 30 ? product.description.slice(0, 30) + '...' : product.description}}
-        </div>
-
-        <div class="product-price">
-          <b>R{{product.value | currency}}</b>
-        </div>
-
-        <button (click)="addToCart(product)" class="add-to-cart-button">Comprar</button>
-
-      </div>
-    </div>
-  
-  <div class="checkout-div" [@toggleClick]="openCart" [ngClass]=" openCart ? 'abrir-carrinho' : 'fechar-carrinho'">
-
-    <h1>Meu Carrinho</h1>
-
-      <div class="checkout" *ngIf="carrinho.products.length > 0; else empty" >
-
-        <div class="list-description-itens-cart">
-          
-
-          <table class="list-cart-itens">
-            <tr *ngFor="let product of carrinho.products">
-            <ng-container class="cart-itens">
-              <td>{{product.description.length > 20 ? product.description.slice(0, 20) + '...' : product.description}}</td>
-              <td>R{{product.value | currency}}</td>
-              <td><a (click)="addQtdToCart(product.id)">+</a><span class="quantity-item">{{product.quantity}}</span> <a (click)="removeQtdToCart(product.id)">-</a></td>
-              <td><a class="emptycart-button" (click)="emptyCart(product.id)"><fa-icon [icon]="faTrash"></fa-icon></a></td>
-
-            </ng-container>
-            </tr>
-          </table>
-        </div>
-
-
-        <div class="checkout-total">
-
-          <div class="discount">
-            <input type="text" class="discount-input" #discountValue (keyup.enter)="applyDiscount(discountValue.value)"/>
-            <button class="discount-button" (click)="applyDiscount(discountValue.value)">Aplicar desconto</button>
-            <div [ngClass]="carrinho.discount > 0 ? 'discount-alert-success' : 'discount-alert-fails'">{{discountText}}</div>
-          </div>
-          <div class="subtotal">Subtotal: R{{carrinho.subtotal | currency}} </div>
-          <div class="total">Total: R{{carrinho.total | currency}}</div>          
-        
-        </div>    
-
-
-    </div>
-    <div class="fechar-carrinho-button">
-      <a (click)="fecharCarrinho()"><fa-icon [icon]="faXmark"></fa-icon> </a>
-    </div>
-    <ng-template #empty>
-
-      <span>O carrinho está vazio</span>
-
-    </ng-template>
-
-  </div>
-
-  <div class="abrir-carrinho-button" [ngStyle]="{ 'visibility' : openCart == 'true' ? 'hidden': 'visible'} ">
-    <a (click)="abrirCarrinho()" > <fa-icon [icon]="faShoppingCart"></fa-icon> </a>
-  </div>
+  <app-cart></app-cart>
 
 
 </div>

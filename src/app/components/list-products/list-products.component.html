@@ -1,0 +1,19 @@
+<div class="product-list">  
+
+    <div class="product" *ngFor="let product of products">
+
+      <img [ngStyle]="{'width': '100%'}" src="https://picsum.photos/200"  alt="">
+
+      <div class="product-description">
+        {{product.description.length > 30 ? product.description.slice(0, 30) + '...' : product.description}}
+      </div>
+
+      <div class="product-price">
+        <b>R{{product.value | currency}}</b>
+      </div>
+
+      <button (click)="addToCart(product)" class="add-to-cart-button">Comprar</button>
+
+    </div>
+    
+</div>

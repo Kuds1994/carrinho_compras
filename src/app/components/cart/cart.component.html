@@ -1,0 +1,51 @@
+<div class="checkout-div" [@toggleClick]="openCart" [ngClass]="openCart ? 'abrir-carrinho' : 'fechar-carrinho'">
+
+    <h1>Meu Carrinho</h1>
+
+      <div class="checkout" *ngIf="cart.products.length > 0; else empty" >
+
+        <div class="list-description-itens-cart">
+          
+
+          <table class="list-cart-itens">
+            <tr *ngFor="let product of cart.products">
+            <ng-container class="cart-itens">
+              <td>{{product.description.length > 20 ? product.description.slice(0, 20) + '...' : product.description}}</td>
+              <td>R{{product.value | currency}}</td>
+              <td><a (click)="addQtdToCart(product)">+</a><span class="quantity-item">{{product.qtd}}</span> <a (click)="removeQtdToCart(product.id)">-</a></td>
+              <td><a class="emptycart-button" (click)="emptyCart(product.id)"><fa-icon [icon]="faTrash"></fa-icon></a></td>
+
+            </ng-container>
+            </tr>
+          </table>
+        </div>
+
+
+        <div class="checkout-total">
+
+          <div class="discount">
+            <input type="text" class="discount-input" #discountValue (keyup.enter)="applyDiscount(discountValue.value)"/>
+            <button class="discount-button" (click)="applyDiscount(discountValue.value)">Aplicar desconto</button>
+            <div [ngClass]="cart.discount > 0 ? 'discount-alert-success' : 'discount-alert-fails'">{{discountText}}</div>
+          </div>
+          <div class="subtotal">Subtotal: R{{cart.subtotal | currency}} </div>
+          <div class="total">Total: R{{cart.total | currency}}</div>          
+        
+        </div>    
+
+
+    </div>
+    <div class="fechar-carrinho-button">
+      <a (click)="fecharCarrinho()"><fa-icon [icon]="faXmark"></fa-icon> </a>
+    </div>
+    <ng-template #empty>
+
+      <span>O carrinho está vazio</span>
+
+    </ng-template>
+
+  </div>
+
+  <div class="abrir-carrinho-button" [ngStyle]="{ 'visibility' : openCart == 'true' ? 'hidden': 'visible'} " (click)="abrirCarrinho()">
+    <a> <fa-icon [icon]="faShoppingCart"></fa-icon> </a>
+  </div>
