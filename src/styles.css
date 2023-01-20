@@ -1,6 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-body {
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
 
-    padding: 50px;
+*{
 
+    
+    font-family: 'Mukta', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    
+
+} 
+
+.spacer{
+    width: 60%;
+    border: 1px solid black;
+    margin-bottom: 20px;
 }

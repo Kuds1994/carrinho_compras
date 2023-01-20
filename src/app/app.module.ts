@@ -7,18 +7,42 @@ import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { CartComponent } from './components/cart/cart.component';
+import { AppRoutingModule } from './routing';
+import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './shareds/not-found/not-found.component';
+import { HeaderComponent } from './shareds/header/header.component';
+import { FooterComponent } from './shareds/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { UserComponent } from './components/user/user.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListProductsComponent,
-    CartComponent
+    CartComponent,
+    HomeComponent,
+    NotFoundComponent,
+    HeaderComponent,
+    FooterComponent,
+    LoginComponent,
+    AdminComponent,
+    UserComponent,
+    ProductDetailsComponent,
+    CartDetailsComponent,
+    CheckoutComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
