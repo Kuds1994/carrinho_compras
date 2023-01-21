@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faBarcode } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-checkout',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 export class CheckoutComponent {
 
   payments = '';
+  faBarcode = faBarcode
 
   onSelect(option: string){
 

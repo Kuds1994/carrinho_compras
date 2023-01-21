@@ -5,7 +5,7 @@
     <div class="checkout-payments">
 
         <select #payment (change)="onSelect(payment.value)" name="" id="">
-
+            <option value="" default>Selecione a forma de pagamento</option>
             <option value="1">Boleto</option>
             <option value="2">Cartão de crédito</option>
             <option value="3">Cartão de débito</option>
@@ -16,11 +16,14 @@
 
     <div class="payment-showout">
 
-        <ng-container *ngSwitch="payments">
-            <div ngSwitchCase="'1'">1</div>
-            <div ngSwitchCase="'2'">2</div>
-            <div ngSwitchCase="'3'">3</div>
-            <div ngSwitchCase="'4'">3</div>
+        <ng-container [ngSwitch]="payments">
+            <div *ngSwitchCase="'1'">
+                <div>Clique para baixar o boleto<fa-icon [icon]="faBarcode" class="payment-shout-barcode"></fa-icon></div>
+            </div>
+            <div *ngSwitchCase="'2'">Ca</div>
+            <div *ngSwitchCase="'3'">3</div>
+            <div *ngSwitchCase="'4'">3</div>
+            <div *ngSwitchDefault></div>
         </ng-container>
         
 
