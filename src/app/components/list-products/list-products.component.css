@@ -1,14 +1,14 @@
 .product-list {
 
     display: flex;
-    justify-content: space-evenly;  
+    justify-content: space-around;  
     flex-wrap: wrap;
 
 }
 
 .product {
 
-    flex-basis:25%;
+    flex-basis: 22%;
     padding: 20px;
     margin-bottom: 20px;
     border: .2px solid gainsboro;    
@@ -16,6 +16,7 @@
 }
 
 .product-description{
+
     margin: 10px 0;
 
 }
@@ -27,20 +28,3 @@
 
 }
 
-.add-to-cart-button{
-
-    width: 100%;
-    padding: 10px;
-    border: 0;
-    border-radius: 10px;
-    background-color: grey;
-    color: white;
-    font-size: 20px;
-
-}
-
-.add-to-cart-button:hover{
-
-    cursor: pointer;
-
-}

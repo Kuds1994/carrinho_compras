@@ -1,14 +1,4 @@
-.list-cart-itens{
 
-    width: 100%;
-
-}
-
-.list-cart-itens tr{
-
-    border: 1px solid black;   
-    
-}
 
 .emptycart-button{
 
@@ -33,84 +23,6 @@
     margin: 20px 0;
 }
 
-.discount{
-
-    margin: 20px 0;
-
-}
-
-.cart-itens{
-
-    margin: 10px 0;
-
-}
-
-.quantity-item{
-
-    margin: 0 10px;
-
-}
-
-.list-cart-itens td a{
-
-    padding: 2px;
-
-}
-
-.list-cart-itens td a:hover{
-
-    cursor: pointer;
-
-}
-
-.discount-button{
-
-    border: 0;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: gray;
-    color: white;
-
-}
-
-.discount-button:hover{
-
-    cursor: pointer;
-
-}
-
-.discount-input{
-
-    border: .1px solid grey;
-    border-radius: 5px;
-    padding: 10px;
-    margin-right: 5px;
-
-}
-
-
-.discount-alert-success{
-
-    display: inline-block;
-    padding: 5px 0;
-    background-color: green;
-    color: white;
-    visibility: visible;
-    margin-top: 5px;
-
-}
-
-.discount-alert-fails{
-
-    display: inline-block;
-    padding: 5px 0;
-    background-color: red;
-    color: white;
-    visibility: visible;
-    margin-top: 5px;
-
-}
-
 .checkout-div{
     
     position: fixed;
@@ -121,6 +33,9 @@
     padding: 20px;
     width: 20%;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
@@ -157,14 +72,14 @@
 .abrir-carrinho-button{
 
     position: fixed;
-    font-size: 40px;
+    font-size: 30px;
     margin: 20px;
     right: 0;
     bottom: 0;
     color: white;
     padding: 10px;
     background-color: black;
-    border-radius: 30px;
+    border-radius: 100px;
     
 }
 
@@ -172,6 +87,26 @@
 
     cursor: pointer;
     
+}
+
+.button-go-to-cart{
+
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+}
+
+.button-go-to-cart:hover{
+
+    cursor: pointer;
+
 }
 
 

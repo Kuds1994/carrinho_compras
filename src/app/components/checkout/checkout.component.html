@@ -1,1 +1,29 @@
-<p>checkout works!</p>
+<div class="checkout">
+
+    <div>Total: R$30</div>
+
+    <div class="checkout-payments">
+
+        <select #payment (change)="onSelect(payment.value)" name="" id="">
+
+            <option value="1">Boleto</option>
+            <option value="2">Cartão de crédito</option>
+            <option value="3">Cartão de débito</option>
+            <option value="4">Pix</option>
+            
+        </select>
+    </div>
+
+    <div class="payment-showout">
+
+        <ng-container *ngSwitch="payments">
+            <div ngSwitchCase="'1'">1</div>
+            <div ngSwitchCase="'2'">2</div>
+            <div ngSwitchCase="'3'">3</div>
+            <div ngSwitchCase="'4'">3</div>
+        </ng-container>
+        
+
+    </div>
+
+</div>

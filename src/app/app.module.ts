@@ -19,6 +19,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ConfirmationComponent } from './components/confirmation/confirmation.co
     ProductDetailsComponent,
     CartDetailsComponent,
     CheckoutComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

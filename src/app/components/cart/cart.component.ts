@@ -9,6 +9,7 @@ import { Discount } from 'src/app/models/discount';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { DiscountService } from 'src/app/services/discount/discount.service';
 
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -56,7 +57,7 @@ export class CartComponent implements OnInit {
 
       this.discountText = ""
 
-    }
+     }
 
   }
 
@@ -68,6 +69,7 @@ export class CartComponent implements OnInit {
       this.discountText = ""
 
     }    
+
 
   }
 

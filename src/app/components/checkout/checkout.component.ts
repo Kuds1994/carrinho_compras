@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class CheckoutComponent {
 
+  payments = '';
+
+  onSelect(option: string){
+
+    this.payments = option;
+
+  }
+
 }

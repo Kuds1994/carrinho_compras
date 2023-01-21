@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 import { AdminComponent } from './components/admin/admin.component';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
@@ -14,6 +16,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'admin', component: AdminComponent},
   {path: 'user', component: UserComponent, canActivate: [GuardsGuard]},
+  {path: 'cart', component: CartDetailsComponent},
+  {path: 'checkout', component: CheckoutComponent},
   {path: 'product/:id', component: ProductDetailsComponent},
   {path: '**', component: NotFoundComponent}
   

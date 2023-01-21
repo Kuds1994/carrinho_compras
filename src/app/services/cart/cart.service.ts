@@ -45,6 +45,31 @@ export class CartService {
 
   }
 
+  addQtdToCartWithQuantity(product: Product, quantity: number)  {
+
+    const p = this.cart.products.findIndex((p) =>
+
+      product.id == p.id
+
+    )
+
+    if(p > -1){
+
+      this.cart.products[p].qtd += quantity   
+
+    } else {
+
+      const productCart: ProductCart = {...product, qtd: quantity}
+      this.cart.products.push(productCart)
+   
+    }
+
+    this.setIsOpen('true')
+    this.sumUp()
+
+
+  }
+
   sumUp() {
 
     this.cart.subtotal = this.cart.products.reduce((a, b) =>{
@@ -148,6 +173,8 @@ export class CartService {
     return this.isOpen;
 
   }    
+
+  
 
   
 }

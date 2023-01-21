@@ -1,1 +1,77 @@
-<p>cart-details works!</p>
+<div class="cart-details">
+
+    <div class="cart-details-container">
+        <div class="cart-details-list">
+            <h1>Meu carrinho</h1>
+            <div class="spacer-cart"></div>
+
+            <table class="list-cart-itens-page">
+                <tr>
+                    <th></th>
+                    <th colspan="1">Descrição</th>
+                    <th >Preço</th>
+                    <th>Quantidade</th>
+                    <th>Excluir</th>
+                </tr>
+
+                <tr class="cart-itens">
+                    <td><img src="https://via.placeholder.com/50" alt=""></td>
+                    <td>asdasdadas asd asd asd ads </td>
+                    <td>R$22</td>
+                    <td class="product-details-informations-qtd"><button class="product-details-informations-qtd-buttons" >+</button><input type="text" value="0" class="product-details-informations-qtd-input" #quantity disabled/><button class="product-details-informations-qtd-buttons">-</button></td>
+                    <td><a class="emptycart-button" ><fa-icon [icon]="faTrash"></fa-icon></a></td>
+                </tr>
+                <tr class="cart-itens">
+                    <td><img src="https://via.placeholder.com/50" alt=""></td>
+                    <td>asdasdadas asd asd asd ads </td>
+                    <td>R$22</td>
+                    <td class="product-details-informations-qtd"><button class="product-details-informations-qtd-buttons" >+</button><input type="text" value="0" class="product-details-informations-qtd-input" #quantity disabled/><button class="product-details-informations-qtd-buttons">-</button></td>
+                    <td><a class="emptycart-button" ><fa-icon [icon]="faTrash"></fa-icon></a></td>
+                </tr>
+                <tr class="cart-itens">
+                    <td><img src="https://via.placeholder.com/50" alt=""></td>
+                    <td>asdasdadas asd asd asd ads </td>
+                    <td>R$22</td>
+                    <td class="product-details-informations-qtd"><button class="product-details-informations-qtd-buttons" >+</button><input type="text" value="0" class="product-details-informations-qtd-input" #quantity disabled/><button class="product-details-informations-qtd-buttons">-</button></td>
+                    <td><a class="emptycart-button" ><fa-icon [icon]="faTrash"></fa-icon></a></td>
+                </tr>
+                <tr class="cart-itens">
+                    <td><img src="https://via.placeholder.com/50" alt=""></td>
+                    <td>asdasdadas asd asd asd ads </td>
+                    <td>R$22</td>
+                    <td class="product-details-informations-qtd"><button class="product-details-informations-qtd-buttons" >+</button><input type="text" value="0" class="product-details-informations-qtd-input" #quantity disabled/><button class="product-details-informations-qtd-buttons">-</button></td>
+                    <td><a class="emptycart-button" ><fa-icon [icon]="faTrash"></fa-icon></a></td>
+                </tr>
+                <tr class="cart-itens">
+                    <td><img src="https://via.placeholder.com/50" alt=""></td>
+                    <td>asdasdadas asd asd asd ads </td>
+                    <td>R$22</td>
+                    <td class="product-details-informations-qtd"><button class="product-details-informations-qtd-buttons" >+</button><input type="text" value="0" class="product-details-informations-qtd-input" #quantity disabled/><button class="product-details-informations-qtd-buttons">-</button></td>
+                    <td><a class="emptycart-button" ><fa-icon [icon]="faTrash"></fa-icon></a></td>
+                </tr>
+                
+                
+            </table>
+
+            <div class="spacer-cart"></div>
+            <div class="cart-resume-total">
+                <div class="discount">
+                    <input type="text" class="discount-input" #discountValue (keyup.enter)="applyDiscount(discountValue.value)"/>
+                    <button class="discount-button" (click)="applyDiscount(discountValue.value)">Aplicar desconto</button>
+                    
+                </div>
+                <div [ngClass]="cart.discount > 0 ? 'discount-alert-success' : 'discount-alert-fails'">{{discountText}}</div>
+                <div class="subtotal">Subtotal: R$30</div>        
+                <div class="total">Total: R$40</div> 
+                <button class="button-finish" routerLink="/checkout">Pagamento</button>   
+            </div>
+
+            
+        </div>
+
+        
+    </div>
+
+</div>
+
+

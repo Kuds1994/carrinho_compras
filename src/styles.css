@@ -1,17 +1,190 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400&display=swap');
 
 *{
-
-    
+   
     font-family: 'Mukta', 'Arial Narrow', Arial, sans-serif;
     box-sizing: border-box;
-    
-
+   
 } 
+
 
 .spacer{
     width: 60%;
     border: 1px solid black;
     margin-bottom: 20px;
 }
+
+.add-to-cart-button{
+
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    background-color: grey;
+    color: white;
+    font-size: 20px;
+
+}
+
+.add-to-cart-button:hover{
+
+    cursor: pointer;
+
+}
+
+.list-cart-itens{
+
+    width: 100%;
+
+}
+
+.list-cart-itens tr{
+
+    border: 1px solid black;   
+    
+}
+
+.list-cart-itens td a{
+
+    padding: 2px;
+
+}
+
+.list-cart-itens td a:hover{
+
+    cursor: pointer;
+
+}
+
+.cart-itens{
+
+    margin: 10px 0;
+
+}
+
+.quantity-item{
+
+    margin: 0 10px;
+
+}
+
+.emptycart-button{
+
+    margin: 10px 0;
+    display: inline-block;
+
+}
+
+.emptycart-button:hover{
+
+    cursor: pointer;
+
+}
+
+.product-details-informations-buy-button:hover{
+
+    cursor: pointer;
+
+}
+
+.product-details-informations-qtd-buttons{
+    box-sizing: border-box;
+    padding: 0 10px;
+    background-color: gray;
+    border: .1px solid gray;
+    color: white;
+    border-radius: 2px;
+}
+
+.product-details-informations-qtd{
+
+    
+
+}
+
+.product-details-informations-qtd-input{
+    
+    width: 4%;
+    text-align: center;
+    border: 0;      
+
+}
+
+.product-details-informations-qtd-buttons{
+    box-sizing: border-box;
+    padding: 0 10px;
+    background-color: gray;
+    border: .1px solid gray;
+    color: white;
+    border-radius: 2px;
+}
+
+.discount-input{
+
+    border: .1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5px;
+
+}
+
+.discount-button{
+
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+
+}
+
+.discount-button:hover{
+
+    cursor: pointer;
+
+}
+
+.discount-alert-success{
+
+    display: inline-block;
+    padding: 5px 0;
+    background-color: green;
+    color: white;
+    visibility: visible;
+    margin-top: 5px;
+
+}
+
+.discount-alert-fails{
+
+    display: inline-block;
+    padding: 5px 0;
+    background-color: red;
+    color: white;
+    visibility: visible;
+    margin-top: 5px;
+
+}
+
+.discount{
+
+    margin: 10px 0;
+
+}
+
+
+
+.discount-input{
+
+    border: .1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5px;
+
+}
+
+
+
+

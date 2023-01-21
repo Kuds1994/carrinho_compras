@@ -2,7 +2,7 @@
 
     <div class="product" *ngFor="let product of products">
 
-      <img [ngStyle]="{'width': '100%'}" src="https://picsum.photos/200"  alt="">
+      <img  src="{{product.img}}"  alt="">
 
       <div class="product-description">
         {{product.description.length > 30 ? product.description.slice(0, 30) + '...' : product.description}}
@@ -12,7 +12,7 @@
         <b>R{{product.value | currency}}</b>
       </div>
 
-      <button (click)="addToCart(product)" class="add-to-cart-button">Comprar</button>
+      <button routerLink="/product/{{product.id}}" class="add-to-cart-button">Adicionar no carrinho</button>
 
     </div>
     

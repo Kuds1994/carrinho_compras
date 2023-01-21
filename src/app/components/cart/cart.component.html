@@ -1,5 +1,6 @@
 <div class="checkout-div" [@toggleClick]="openCart" [ngClass]="openCart ? 'abrir-carrinho' : 'fechar-carrinho'">
 
+    <div>
     <h1>Meu Carrinho</h1>
 
       <div class="checkout" *ngIf="cart.products.length > 0; else empty" >
@@ -35,6 +36,11 @@
 
 
     </div>
+
+  </div>
+
+  <div><button routerLink="/cart" class="button-go-to-cart">Ir para carrinho</button></div>
+
     <div class="fechar-carrinho-button">
       <a (click)="fecharCarrinho()"><fa-icon [icon]="faXmark"></fa-icon> </a>
     </div>
@@ -44,8 +50,4 @@
 
     </ng-template>
 
-  </div>
-
-  <div class="abrir-carrinho-button" [ngStyle]="{ 'visibility' : openCart == 'true' ? 'hidden': 'visible'} " (click)="abrirCarrinho()">
-    <a> <fa-icon [icon]="faShoppingCart"></fa-icon> </a>
   </div>

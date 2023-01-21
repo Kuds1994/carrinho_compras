@@ -1,0 +1,14 @@
+<div class="carousel-container" >
+
+    <h1>{{carouselTitle}}</h1>
+
+    <div class="carousel" data-flickity='{ "wrapAround": true}'>
+        <div class="carousel-cell" *ngFor="let product of products"> 
+            <img src="{{product.img}}" alt=""> 
+            <div class="carousel-descrition-item">
+                <div> {{product.description}} </div>
+                <button class="add-to-cart-button" routerLink="/product/{{product.id}}">Adicionar ao carrinho</button>
+            </div>
+        </div>        
+    </div>
+</div>
